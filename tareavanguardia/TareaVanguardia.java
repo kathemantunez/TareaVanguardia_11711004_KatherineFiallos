@@ -5,6 +5,10 @@
  */
 package tareavanguardia;
 
+
+import Factory.Car;
+import Factory.CarFactory;
+import Factory.CarType;
 import Singleton.EagerSingleton;
 
 /**
@@ -43,6 +47,15 @@ public class TareaVanguardia {
     }
 
     private static void factory() {
+        CarFactory factory=new CarFactory();
+        
+        Car c1=factory.buildCar(CarType.SMALLCAR);
+        System.out.println(c1.getModel()+" carro creado exitosamente");
+        Car c2=factory.buildCar(CarType.LUXURYCAR);
+        System.out.println(c2.getModel()+" carro creado exitosamente");
+        Car c3=factory.buildCar(CarType.SEDANCAR);
+        System.out.println(c3.getModel()+" carro creado exitosamente");
+        
     }
 
     private static void observer() {
