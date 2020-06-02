@@ -14,6 +14,8 @@ import Builder1.MealBuilder;
 import Builder1.SandwichMealBuilder;
 import Builder1.MealDirector;
 import Builder1.Meal;
+import Observer.HeadHunter;
+import Observer.JobSeeker;
 
 /**
  *
@@ -63,6 +65,29 @@ public class TareaVanguardia {
     }
 
     private static void observer() {
+        HeadHunter h=new HeadHunter();
+        JobSeeker j1=new JobSeeker("Luis");
+        JobSeeker j2=new JobSeeker("Lucas");
+        JobSeeker j3=new JobSeeker("Miguel");
+        JobSeeker j4=new JobSeeker("Orlando");
+        
+        h.registerObserver(j1);
+        h.registerObserver(j2);
+        h.registerObserver(j3);
+        h.registerObserver(j4);
+        
+        h.removeObserver(j4);
+        
+        System.out.println("Asignacion 1:notificar a:");
+        h.addJob("Crear Interfaz ");
+        System.out.println("Asignacion 2:notificar a:");
+        h.addJob("Crear base de datos en SQLServer ");
+        System.out.println("Asignacion 3:notificar a:");
+        h.addJob("Crear sistema contable ");
+        
+        
+        
+        
    }
 
     private static void Builder() {
