@@ -47,8 +47,9 @@ public class TareaVanguardia {
        EagerSingleton x=EagerSingleton.getInstance();
        EagerSingleton y =EagerSingleton.getInstance();
        
-        System.out.println(x.toString());
-        System.out.println(y.toString());
+        System.out.println("Objeto EagerSingleton x:"+x.toString());
+        System.out.println("Objeto EagerSingleton y:"+y.toString());
+        System.out.println("y tiene la misma instancia de x");
         
     }
 
