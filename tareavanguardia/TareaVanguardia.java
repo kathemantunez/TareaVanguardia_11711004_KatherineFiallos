@@ -10,6 +10,10 @@ import Factory.Car;
 import Factory.CarFactory;
 import Factory.CarType;
 import Singleton.EagerSingleton;
+import Builder1.MealBuilder;
+import Builder1.SandwichMealBuilder;
+import Builder1.MealDirector;
+import Builder1.Meal;
 
 /**
  *
@@ -62,6 +66,12 @@ public class TareaVanguardia {
    }
 
     private static void Builder() {
+        MealBuilder mb=new SandwichMealBuilder();
+        MealDirector d=new MealDirector();
+        
+        d.makeMeal(mb);
+        Meal m=mb.getMeal();
+        System.out.println(m.toString());
     }
     
 }
